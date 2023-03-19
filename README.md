@@ -1,4 +1,4 @@
-#Dotfiles for neovim
+# Dotfiles for neovim
 
 Minimal config.
 
