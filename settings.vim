@@ -37,12 +37,3 @@ au BufEnter * set fo-=c fo-=r fo-=o
 "netrw
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
-
-"undotree
-let g:undotree_SetFocusWhenToggle = 1
-
-"floaterm
-let g:floaterm_width = 0.9
-let g:floaterm_height = 0.9
-let g:floaterm_giteditor = v:false
-let g:floaterm_opener = 'split'

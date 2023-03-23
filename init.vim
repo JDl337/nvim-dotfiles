@@ -13,6 +13,8 @@ source $HOME/.config/nvim/pluginconf/indent.lua
 source $HOME/.config/nvim/pluginconf/treesitter.lua
 source $HOME/.config/nvim/pluginconf/devicons.lua
 source $HOME/.config/nvim/pluginconf/dapconfig.lua
+source $HOME/.config/nvim/pluginconf/undotree.vim
+source $HOME/.config/nvim/pluginconf/floaterm.vim
 
 "Colors
 source $HOME/.config/nvim/pluginconf/gruvboxmaterialconf.vim
