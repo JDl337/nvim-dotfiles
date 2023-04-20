@@ -2,6 +2,9 @@
 local lspconfig = require('lspconfig')
 local coq = require "coq"
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 lspconfig.pyright.setup {}
 require('lspconfig')['pyright'].setup(coq.lsp_ensure_capabilities{})
 
@@ -9,7 +12,22 @@ lspconfig.clangd.setup {}
 require('lspconfig')['clangd'].setup(coq.lsp_ensure_capabilities{})
 
 lspconfig.html.setup {}
-require('lspconfig')['html'].setup(coq.lsp_ensure_capabilities{})
+require('lspconfig')['html'].setup(coq.lsp_ensure_capabilities{
+    capabilities = capabilities;
+})
+
+lspconfig.cssls.setup {}
+require('lspconfig')['cssls'].setup(coq.lsp_ensure_capabilities{
+    capabilities = capabilities;
+})
+
+lspconfig.jsonls.setup {}
+require('lspconfig')['jsonls'].setup(coq.lsp_ensure_capabilities{
+    capabilities = capabilities;
+})
+
+require'lspconfig'.tsserver.setup{}
+require('lspconfig')['tsserver'].setup(coq.lsp_ensure_capabilities{})
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions

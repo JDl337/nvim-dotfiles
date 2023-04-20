@@ -37,3 +37,8 @@ au BufEnter * set fo-=c fo-=r fo-=o
 "netrw
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
+
+"Treesitter folds
+"set foldmethod=expr
+"set foldexpr=nvim_treesitter#foldexpr()
+"set nofoldenable                     " Disable folding at startup.

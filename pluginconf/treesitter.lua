@@ -1,5 +1,5 @@
 require'nvim-treesitter.configs'.setup {
-  -- A list of parser names, or "all"
+  -- A list of parser names, or "all" 
   ensure_installed = { "c", "java", "python", "cpp", "html", "css",
   "javascript", "lua", "vim", "json" },
 
@@ -26,3 +26,10 @@ require'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = false,
   },
 }
+
+local vim = vim
+local opt = vim.opt
+
+opt.foldmethod = "expr"
+opt.foldexpr = "nvim_treesitter#foldexpr()"
+opt.foldenable = false
